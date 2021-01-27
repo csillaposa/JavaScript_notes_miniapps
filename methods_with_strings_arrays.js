@@ -78,3 +78,19 @@ function findMinAndMax(array) {
 }
 
 findMinAndMax([1,2,3]);
+
+//check if a string is palindrome
+
+function ifPalindrome(word) {
+    var wordArray = word.split('');
+    var wordReverseArray = word.split('').reverse();
+    for (var i = 0; i < word.length; i++) {
+        if (wordArray[i] === wordReverseArray[i]) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+console.log(ifPalindrome("racecar"));
