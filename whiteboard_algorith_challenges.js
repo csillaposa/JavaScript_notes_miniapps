@@ -34,26 +34,46 @@ function removeOddWithFilter(array) {
 
 removeOddWithFilter([10,9,8,7]);
 
-//repeat a string with for loop
+//repeat a string with FOR LOOP
 
 function repeatString(word, count) {
-    wordArray = [];
+    if (count > 0) {
+        wordArray = [];
     for (var i = 0; i < count; i++) {
         wordArray.push(word);
+        }
     }
     return wordArray.join('');
 }
 
 console.log(repeatString("car", 5));
 
-//repeat a string with for loop solution 2
+//repeat a string with FOR LOOP solution 2
 
 function repeatString2(word, count) {
-    var repeatString = "";
+    if (count > 0) {
+        var repeatString = "";
     for (var i = 0; i < count; i++) {
         repeatString += word;
+        }
     }
     return repeatString;
 }
 
 console.log(repeatString2("cat", 9));
+
+//repeat a string with WHILE LOOP
+
+function repeatString3(word, count) {
+    if (count > 0) {
+        var repeatString = "";
+    var i = 0;
+    while (i < count) {
+        repeatString += word;
+        i++;
+        }
+    }
+    return repeatString;
+}
+
+console.log(repeatString3("wow", 3));
