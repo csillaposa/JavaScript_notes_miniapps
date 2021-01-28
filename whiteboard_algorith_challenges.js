@@ -77,3 +77,41 @@ function repeatString3(word, count) {
 }
 
 console.log(repeatString3("wow", 3));
+
+//find the longest string with REPLACE METHOD and REGEX
+
+function findLongestWord(sentence) {
+
+    //to remove all non-word characters
+    var stringWithoutSpecials = sentence.replace(/\W/g, ' ');
+    var longestWord = 0;
+    var arrayOfWords = stringWithoutSpecials.split(' ');
+
+    for (var i = 0; i < arrayOfWords.length; i++) {
+        if (arrayOfWords[i].length > longestWord) {
+            longestWord = arrayOfWords[i].length;
+        }
+    }
+    return longestWord;
+}
+
+console.log(findLongestWord("Hello my name is whatever."));
+
+//find the longest string with REPLACE METHOD and REGEX and with FOR OF
+
+function findLongestWord2(sentence) {
+
+    var stringWithoutSpecials = sentence.replace(/\W/g, ' ');
+    var longestWord = '';
+    var arrayOfWords = stringWithoutSpecials.split(' ');
+
+    for (var count of arrayOfWords) {
+        if (count.length > longestWord.length) {
+            longestWord = count;
+        }
+    }
+    return longestWord.length;
+}
+
+console.log(findLongestWord2("Hello my name is whatever."));
+
