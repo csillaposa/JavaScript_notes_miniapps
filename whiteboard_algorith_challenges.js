@@ -133,3 +133,17 @@ function alpahbetizeString2(word) {
 }
 
 console.log(alpahbetizeString2("plant"));
+
+//filter numbers or strings in an array
+
+function filterArray(array) {
+    return array.filter( item => typeof item === "number")
+}
+
+console.log(filterArray([1,2,'a','b']));
+
+function filterArray2(array) {
+    return array.filter( item => typeof item === "string")
+}
+
+console.log(filterArray2([1,2,'a','b']));
