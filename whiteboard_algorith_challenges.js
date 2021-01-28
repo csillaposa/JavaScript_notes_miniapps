@@ -115,3 +115,21 @@ function findLongestWord2(sentence) {
 
 console.log(findLongestWord2("Hello my name is whatever."));
 
+//alphabetize string letters with SORT METHOD
+
+function alpahbetizeString(word) {
+    var alpahbetizeString = word.split('').sort().join('');
+    return alpahbetizeString;
+}
+
+console.log(alpahbetizeString("flower"));
+
+//alphabetize string letters with SORT METHOD and SPREAD SYNTAX
+
+function alpahbetizeString2(word) {
+
+    //spreads the elements
+    return [...word].sort().join('');
+}
+
+console.log(alpahbetizeString2("plant"));
