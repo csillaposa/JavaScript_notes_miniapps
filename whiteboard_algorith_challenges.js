@@ -147,3 +147,11 @@ function filterArray2(array) {
 }
 
 console.log(filterArray2([1,2,'a','b']));
+
+//find the largest number in an array
+
+function findLargestNumber(array) {
+    return Math.max(...array);
+}
+
+console.log(findLargestNumber([1,2,3,4,5]));
