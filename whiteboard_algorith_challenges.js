@@ -196,3 +196,17 @@ function reverseString4(word) {
 
 console.log(reverseString4("cat"));
 
+//check if a sentence is palindrome
+
+function isPalindrome(sentence) {
+    var noSpecialChar = sentence.replace(/\W/g, '');
+    var noUpperCase = noSpecialChar.toLowerCase();
+    var reverseSentence = noUpperCase.split('').reverse().join('');
+    if (noUpperCase === reverseSentence) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isPalindrome("A nut for a jar of tuna?"));
