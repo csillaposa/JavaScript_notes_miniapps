@@ -155,3 +155,44 @@ function findLargestNumber(array) {
 }
 
 console.log(findLargestNumber([1,2,3,4,5]));
+
+//reverse a string
+
+function reverseString(word) {
+    return word.split('').reverse().join('');
+}
+
+console.log(reverseString("flower"));
+
+//reverse a string with SPREAD SYNTAX
+
+function reverseString2(word) {
+    return [...word].reverse().join('');
+}
+
+console.log(reverseString2("plant"));
+
+//reverse a string with FOR LOOP
+
+function reverseString3(word) {
+    var reverseString = '';
+    for (var i = word.length - 1; i >= 0; i--) {
+        reverseString += word[i];
+    }
+    return reverseString;
+}
+
+console.log(reverseString3("dog"));
+
+//reverse a string with FOR OF LOOP
+
+function reverseString4(word) {
+    var reverseString = '';
+    for (var count of word) {
+        reverseString = count + reverseString;
+    }
+    return reverseString;
+}
+
+console.log(reverseString4("cat"));
+
